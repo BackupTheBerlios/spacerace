@@ -1,0 +1,454 @@
+# Microsoft Developer Studio erstellte Abhängigkeitsdatei, einbezogen von QTOpenGL.mak
+
+.\Controller.cpp : \
+	".\Controller.h"\
+	".\Controller_moc.cpp"\
+	".\paint_widget_qt.h"\
+	".\RotMatrix.h"\
+	".\Ship.h"\
+	".\State.h"\
+	".\StateList.h"\
+	".\Vektor3f.h"\
+	{$(INCLUDE)}"qabstractlayout.h"\
+	{$(INCLUDE)}"qapplication.h"\
+	{$(INCLUDE)}"qarray.h"\
+	{$(INCLUDE)}"qasciidict.h"\
+	{$(INCLUDE)}"qbrush.h"\
+	{$(INCLUDE)}"qbutton.h"\
+	{$(INCLUDE)}"qcollection.h"\
+	{$(INCLUDE)}"qcolor.h"\
+	{$(INCLUDE)}"qconfig.h"\
+	{$(INCLUDE)}"qconnection.h"\
+	{$(INCLUDE)}"qcstring.h"\
+	{$(INCLUDE)}"qcursor.h"\
+	{$(INCLUDE)}"qdatastream.h"\
+	{$(INCLUDE)}"qdatetime.h"\
+	{$(INCLUDE)}"qdialog.h"\
+	{$(INCLUDE)}"qdict.h"\
+	{$(INCLUDE)}"qdir.h"\
+	{$(INCLUDE)}"qdrawutil.h"\
+	{$(INCLUDE)}"qevent.h"\
+	{$(INCLUDE)}"qfeatures.h"\
+	{$(INCLUDE)}"qfile.h"\
+	{$(INCLUDE)}"qfiledialog.h"\
+	{$(INCLUDE)}"qfileinfo.h"\
+	{$(INCLUDE)}"qfont.h"\
+	{$(INCLUDE)}"qfontinfo.h"\
+	{$(INCLUDE)}"qfontmetrics.h"\
+	{$(INCLUDE)}"qframe.h"\
+	{$(INCLUDE)}"qgarray.h"\
+	{$(INCLUDE)}"qgdict.h"\
+	{$(INCLUDE)}"qgl.h"\
+	{$(INCLUDE)}"qglist.h"\
+	{$(INCLUDE)}"qglobal.h"\
+	{$(INCLUDE)}"qgvector.h"\
+	{$(INCLUDE)}"qiconset.h"\
+	{$(INCLUDE)}"qimage.h"\
+	{$(INCLUDE)}"qintdict.h"\
+	{$(INCLUDE)}"qiodevice.h"\
+	{$(INCLUDE)}"qlayout.h"\
+	{$(INCLUDE)}"qlineedit.h"\
+	{$(INCLUDE)}"qlist.h"\
+	{$(INCLUDE)}"qlistbox.h"\
+	{$(INCLUDE)}"qlistview.h"\
+	{$(INCLUDE)}"qmetaobject.h"\
+	{$(INCLUDE)}"qmime.h"\
+	{$(INCLUDE)}"qnamespace.h"\
+	{$(INCLUDE)}"qnetworkprotocol.h"\
+	{$(INCLUDE)}"qobject.h"\
+	{$(INCLUDE)}"qobjectdefs.h"\
+	{$(INCLUDE)}"qpaintdevice.h"\
+	{$(INCLUDE)}"qpainter.h"\
+	{$(INCLUDE)}"qpalette.h"\
+	{$(INCLUDE)}"qpen.h"\
+	{$(INCLUDE)}"qpixmap.h"\
+	{$(INCLUDE)}"qpoint.h"\
+	{$(INCLUDE)}"qpointarray.h"\
+	{$(INCLUDE)}"qpushbutton.h"\
+	{$(INCLUDE)}"qqueue.h"\
+	{$(INCLUDE)}"qrangecontrol.h"\
+	{$(INCLUDE)}"qrect.h"\
+	{$(INCLUDE)}"qregexp.h"\
+	{$(INCLUDE)}"qregion.h"\
+	{$(INCLUDE)}"qscrollbar.h"\
+	{$(INCLUDE)}"qscrollview.h"\
+	{$(INCLUDE)}"qshared.h"\
+	{$(INCLUDE)}"qsignalslotimp.h"\
+	{$(INCLUDE)}"qsize.h"\
+	{$(INCLUDE)}"qsizepolicy.h"\
+	{$(INCLUDE)}"qstring.h"\
+	{$(INCLUDE)}"qstringlist.h"\
+	{$(INCLUDE)}"qstrlist.h"\
+	{$(INCLUDE)}"qstyle.h"\
+	{$(INCLUDE)}"qt_windows.h"\
+	{$(INCLUDE)}"qtextstream.h"\
+	{$(INCLUDE)}"qtimer.h"\
+	{$(INCLUDE)}"qtranslator.h"\
+	{$(INCLUDE)}"qurl.h"\
+	{$(INCLUDE)}"qurlinfo.h"\
+	{$(INCLUDE)}"qurloperator.h"\
+	{$(INCLUDE)}"qvaluelist.h"\
+	{$(INCLUDE)}"qvector.h"\
+	{$(INCLUDE)}"qwidget.h"\
+	{$(INCLUDE)}"qwindowdefs.h"\
+	{$(INCLUDE)}"qwindowdefs_win.h"\
+	{$(INCLUDE)}"qwmatrix.h"\
+	
+
+.\Gate.cpp : \
+	".\Gate.h"\
+	".\RotMatrix.h"\
+	".\State.h"\
+	".\StateList.h"\
+	".\Vektor3f.h"\
+	{$(INCLUDE)}"qarray.h"\
+	{$(INCLUDE)}"qcollection.h"\
+	{$(INCLUDE)}"qconfig.h"\
+	{$(INCLUDE)}"qcstring.h"\
+	{$(INCLUDE)}"qdatastream.h"\
+	{$(INCLUDE)}"qevent.h"\
+	{$(INCLUDE)}"qfeatures.h"\
+	{$(INCLUDE)}"qgarray.h"\
+	{$(INCLUDE)}"qglist.h"\
+	{$(INCLUDE)}"qglobal.h"\
+	{$(INCLUDE)}"qiodevice.h"\
+	{$(INCLUDE)}"qlist.h"\
+	{$(INCLUDE)}"qmime.h"\
+	{$(INCLUDE)}"qnamespace.h"\
+	{$(INCLUDE)}"qobject.h"\
+	{$(INCLUDE)}"qobjectdefs.h"\
+	{$(INCLUDE)}"qpoint.h"\
+	{$(INCLUDE)}"qrect.h"\
+	{$(INCLUDE)}"qregexp.h"\
+	{$(INCLUDE)}"qregion.h"\
+	{$(INCLUDE)}"qshared.h"\
+	{$(INCLUDE)}"qsize.h"\
+	{$(INCLUDE)}"qstring.h"\
+	{$(INCLUDE)}"qstringlist.h"\
+	{$(INCLUDE)}"qtextstream.h"\
+	{$(INCLUDE)}"qvaluelist.h"\
+	{$(INCLUDE)}"qwindowdefs.h"\
+	{$(INCLUDE)}"qwindowdefs_win.h"\
+	
+
+.\minipaint.cpp : \
+	".\Controller.h"\
+	".\paint_widget_qt.h"\
+	".\RotMatrix.h"\
+	".\Ship.h"\
+	".\State.h"\
+	".\StateList.h"\
+	".\Vektor3f.h"\
+	{$(INCLUDE)}"qabstractlayout.h"\
+	{$(INCLUDE)}"qapplication.h"\
+	{$(INCLUDE)}"qarray.h"\
+	{$(INCLUDE)}"qasciidict.h"\
+	{$(INCLUDE)}"qbrush.h"\
+	{$(INCLUDE)}"qbutton.h"\
+	{$(INCLUDE)}"qcollection.h"\
+	{$(INCLUDE)}"qcolor.h"\
+	{$(INCLUDE)}"qconfig.h"\
+	{$(INCLUDE)}"qcstring.h"\
+	{$(INCLUDE)}"qcursor.h"\
+	{$(INCLUDE)}"qdatastream.h"\
+	{$(INCLUDE)}"qdatetime.h"\
+	{$(INCLUDE)}"qdialog.h"\
+	{$(INCLUDE)}"qdict.h"\
+	{$(INCLUDE)}"qdir.h"\
+	{$(INCLUDE)}"qdrawutil.h"\
+	{$(INCLUDE)}"qevent.h"\
+	{$(INCLUDE)}"qfeatures.h"\
+	{$(INCLUDE)}"qfile.h"\
+	{$(INCLUDE)}"qfiledialog.h"\
+	{$(INCLUDE)}"qfileinfo.h"\
+	{$(INCLUDE)}"qfont.h"\
+	{$(INCLUDE)}"qfontinfo.h"\
+	{$(INCLUDE)}"qfontmetrics.h"\
+	{$(INCLUDE)}"qframe.h"\
+	{$(INCLUDE)}"qgarray.h"\
+	{$(INCLUDE)}"qgdict.h"\
+	{$(INCLUDE)}"qgl.h"\
+	{$(INCLUDE)}"qglist.h"\
+	{$(INCLUDE)}"qglobal.h"\
+	{$(INCLUDE)}"qgvector.h"\
+	{$(INCLUDE)}"qiconset.h"\
+	{$(INCLUDE)}"qimage.h"\
+	{$(INCLUDE)}"qintdict.h"\
+	{$(INCLUDE)}"qiodevice.h"\
+	{$(INCLUDE)}"qlayout.h"\
+	{$(INCLUDE)}"qlineedit.h"\
+	{$(INCLUDE)}"qlist.h"\
+	{$(INCLUDE)}"qlistbox.h"\
+	{$(INCLUDE)}"qlistview.h"\
+	{$(INCLUDE)}"qmainwindow.h"\
+	{$(INCLUDE)}"qmenubar.h"\
+	{$(INCLUDE)}"qmenudata.h"\
+	{$(INCLUDE)}"qmime.h"\
+	{$(INCLUDE)}"qnamespace.h"\
+	{$(INCLUDE)}"qnetworkprotocol.h"\
+	{$(INCLUDE)}"qobject.h"\
+	{$(INCLUDE)}"qobjectdefs.h"\
+	{$(INCLUDE)}"qpaintdevice.h"\
+	{$(INCLUDE)}"qpainter.h"\
+	{$(INCLUDE)}"qpalette.h"\
+	{$(INCLUDE)}"qpen.h"\
+	{$(INCLUDE)}"qpixmap.h"\
+	{$(INCLUDE)}"qpoint.h"\
+	{$(INCLUDE)}"qpointarray.h"\
+	{$(INCLUDE)}"qpopupmenu.h"\
+	{$(INCLUDE)}"qpushbutton.h"\
+	{$(INCLUDE)}"qqueue.h"\
+	{$(INCLUDE)}"qrangecontrol.h"\
+	{$(INCLUDE)}"qrect.h"\
+	{$(INCLUDE)}"qregexp.h"\
+	{$(INCLUDE)}"qregion.h"\
+	{$(INCLUDE)}"qscrollbar.h"\
+	{$(INCLUDE)}"qscrollview.h"\
+	{$(INCLUDE)}"qshared.h"\
+	{$(INCLUDE)}"qsignal.h"\
+	{$(INCLUDE)}"qsize.h"\
+	{$(INCLUDE)}"qsizepolicy.h"\
+	{$(INCLUDE)}"qstring.h"\
+	{$(INCLUDE)}"qstringlist.h"\
+	{$(INCLUDE)}"qstrlist.h"\
+	{$(INCLUDE)}"qstyle.h"\
+	{$(INCLUDE)}"qt_windows.h"\
+	{$(INCLUDE)}"qtextstream.h"\
+	{$(INCLUDE)}"qtimer.h"\
+	{$(INCLUDE)}"qtranslator.h"\
+	{$(INCLUDE)}"qurl.h"\
+	{$(INCLUDE)}"qurlinfo.h"\
+	{$(INCLUDE)}"qurloperator.h"\
+	{$(INCLUDE)}"qvaluelist.h"\
+	{$(INCLUDE)}"qvector.h"\
+	{$(INCLUDE)}"qwidget.h"\
+	{$(INCLUDE)}"qwindowdefs.h"\
+	{$(INCLUDE)}"qwindowdefs_win.h"\
+	{$(INCLUDE)}"qwmatrix.h"\
+	
+
+.\paint_widget_qt.cpp : \
+	".\paint_widget_qt.h"\
+	".\paint_widget_qt_moc.cpp"\
+	".\State.h"\
+	".\StateList.h"\
+	".\Vektor3f.h"\
+	{$(INCLUDE)}"qabstractlayout.h"\
+	{$(INCLUDE)}"qapplication.h"\
+	{$(INCLUDE)}"qarray.h"\
+	{$(INCLUDE)}"qasciidict.h"\
+	{$(INCLUDE)}"qbrush.h"\
+	{$(INCLUDE)}"qbutton.h"\
+	{$(INCLUDE)}"qcollection.h"\
+	{$(INCLUDE)}"qcolor.h"\
+	{$(INCLUDE)}"qconfig.h"\
+	{$(INCLUDE)}"qconnection.h"\
+	{$(INCLUDE)}"qcstring.h"\
+	{$(INCLUDE)}"qcursor.h"\
+	{$(INCLUDE)}"qdatastream.h"\
+	{$(INCLUDE)}"qdatetime.h"\
+	{$(INCLUDE)}"qdialog.h"\
+	{$(INCLUDE)}"qdict.h"\
+	{$(INCLUDE)}"qdir.h"\
+	{$(INCLUDE)}"qdrawutil.h"\
+	{$(INCLUDE)}"qevent.h"\
+	{$(INCLUDE)}"qfeatures.h"\
+	{$(INCLUDE)}"qfile.h"\
+	{$(INCLUDE)}"qfiledialog.h"\
+	{$(INCLUDE)}"qfileinfo.h"\
+	{$(INCLUDE)}"qfont.h"\
+	{$(INCLUDE)}"qfontinfo.h"\
+	{$(INCLUDE)}"qfontmetrics.h"\
+	{$(INCLUDE)}"qframe.h"\
+	{$(INCLUDE)}"qgarray.h"\
+	{$(INCLUDE)}"qgdict.h"\
+	{$(INCLUDE)}"qgl.h"\
+	{$(INCLUDE)}"qglist.h"\
+	{$(INCLUDE)}"qglobal.h"\
+	{$(INCLUDE)}"qiconset.h"\
+	{$(INCLUDE)}"qimage.h"\
+	{$(INCLUDE)}"qintdict.h"\
+	{$(INCLUDE)}"qiodevice.h"\
+	{$(INCLUDE)}"qlayout.h"\
+	{$(INCLUDE)}"qlineedit.h"\
+	{$(INCLUDE)}"qlist.h"\
+	{$(INCLUDE)}"qlistbox.h"\
+	{$(INCLUDE)}"qlistview.h"\
+	{$(INCLUDE)}"qmetaobject.h"\
+	{$(INCLUDE)}"qmime.h"\
+	{$(INCLUDE)}"qnamespace.h"\
+	{$(INCLUDE)}"qnetworkprotocol.h"\
+	{$(INCLUDE)}"qobject.h"\
+	{$(INCLUDE)}"qobjectdefs.h"\
+	{$(INCLUDE)}"qpaintdevice.h"\
+	{$(INCLUDE)}"qpainter.h"\
+	{$(INCLUDE)}"qpalette.h"\
+	{$(INCLUDE)}"qpen.h"\
+	{$(INCLUDE)}"qpixmap.h"\
+	{$(INCLUDE)}"qpoint.h"\
+	{$(INCLUDE)}"qpointarray.h"\
+	{$(INCLUDE)}"qpushbutton.h"\
+	{$(INCLUDE)}"qqueue.h"\
+	{$(INCLUDE)}"qrangecontrol.h"\
+	{$(INCLUDE)}"qrect.h"\
+	{$(INCLUDE)}"qregexp.h"\
+	{$(INCLUDE)}"qregion.h"\
+	{$(INCLUDE)}"qscrollbar.h"\
+	{$(INCLUDE)}"qscrollview.h"\
+	{$(INCLUDE)}"qshared.h"\
+	{$(INCLUDE)}"qsize.h"\
+	{$(INCLUDE)}"qsizepolicy.h"\
+	{$(INCLUDE)}"qstring.h"\
+	{$(INCLUDE)}"qstringlist.h"\
+	{$(INCLUDE)}"qstrlist.h"\
+	{$(INCLUDE)}"qstyle.h"\
+	{$(INCLUDE)}"qt_windows.h"\
+	{$(INCLUDE)}"qtextstream.h"\
+	{$(INCLUDE)}"qtimer.h"\
+	{$(INCLUDE)}"qtranslator.h"\
+	{$(INCLUDE)}"qurl.h"\
+	{$(INCLUDE)}"qurlinfo.h"\
+	{$(INCLUDE)}"qurloperator.h"\
+	{$(INCLUDE)}"qvaluelist.h"\
+	{$(INCLUDE)}"qwidget.h"\
+	{$(INCLUDE)}"qwindowdefs.h"\
+	{$(INCLUDE)}"qwindowdefs_win.h"\
+	{$(INCLUDE)}"qwmatrix.h"\
+	
+
+.\RotMatrix.cpp : \
+	".\RotMatrix.h"\
+	".\Vektor3f.h"\
+	
+
+.\Ship.cpp : \
+	".\RotMatrix.h"\
+	".\Ship.h"\
+	".\Ship_moc.cpp"\
+	".\State.h"\
+	".\StateList.h"\
+	".\Vektor3f.h"\
+	{$(INCLUDE)}"qapplication.h"\
+	{$(INCLUDE)}"qarray.h"\
+	{$(INCLUDE)}"qasciidict.h"\
+	{$(INCLUDE)}"qbrush.h"\
+	{$(INCLUDE)}"qcollection.h"\
+	{$(INCLUDE)}"qcolor.h"\
+	{$(INCLUDE)}"qconfig.h"\
+	{$(INCLUDE)}"qconnection.h"\
+	{$(INCLUDE)}"qcstring.h"\
+	{$(INCLUDE)}"qcursor.h"\
+	{$(INCLUDE)}"qdatastream.h"\
+	{$(INCLUDE)}"qevent.h"\
+	{$(INCLUDE)}"qfeatures.h"\
+	{$(INCLUDE)}"qfont.h"\
+	{$(INCLUDE)}"qfontinfo.h"\
+	{$(INCLUDE)}"qfontmetrics.h"\
+	{$(INCLUDE)}"qgarray.h"\
+	{$(INCLUDE)}"qgdict.h"\
+	{$(INCLUDE)}"qglist.h"\
+	{$(INCLUDE)}"qglobal.h"\
+	{$(INCLUDE)}"qintdict.h"\
+	{$(INCLUDE)}"qiodevice.h"\
+	{$(INCLUDE)}"qlist.h"\
+	{$(INCLUDE)}"qmetaobject.h"\
+	{$(INCLUDE)}"qmime.h"\
+	{$(INCLUDE)}"qnamespace.h"\
+	{$(INCLUDE)}"qobject.h"\
+	{$(INCLUDE)}"qobjectdefs.h"\
+	{$(INCLUDE)}"qpaintdevice.h"\
+	{$(INCLUDE)}"qpalette.h"\
+	{$(INCLUDE)}"qpoint.h"\
+	{$(INCLUDE)}"qrect.h"\
+	{$(INCLUDE)}"qregexp.h"\
+	{$(INCLUDE)}"qregion.h"\
+	{$(INCLUDE)}"qshared.h"\
+	{$(INCLUDE)}"qsize.h"\
+	{$(INCLUDE)}"qsizepolicy.h"\
+	{$(INCLUDE)}"qstring.h"\
+	{$(INCLUDE)}"qstringlist.h"\
+	{$(INCLUDE)}"qstrlist.h"\
+	{$(INCLUDE)}"qstyle.h"\
+	{$(INCLUDE)}"qtextstream.h"\
+	{$(INCLUDE)}"qtranslator.h"\
+	{$(INCLUDE)}"qvaluelist.h"\
+	{$(INCLUDE)}"qwidget.h"\
+	{$(INCLUDE)}"qwindowdefs.h"\
+	{$(INCLUDE)}"qwindowdefs_win.h"\
+	
+
+.\State.cpp : \
+	".\State.h"\
+	".\Vektor3f.h"\
+	{$(INCLUDE)}"qarray.h"\
+	{$(INCLUDE)}"qconfig.h"\
+	{$(INCLUDE)}"qcstring.h"\
+	{$(INCLUDE)}"qfeatures.h"\
+	{$(INCLUDE)}"qgarray.h"\
+	{$(INCLUDE)}"qglobal.h"\
+	{$(INCLUDE)}"qiodevice.h"\
+	{$(INCLUDE)}"qshared.h"\
+	{$(INCLUDE)}"qstring.h"\
+	{$(INCLUDE)}"qtextstream.h"\
+	
+
+.\StateList.cpp : \
+	".\State.h"\
+	".\StateList.h"\
+	".\Vektor3f.h"\
+	{$(INCLUDE)}"qarray.h"\
+	{$(INCLUDE)}"qconfig.h"\
+	{$(INCLUDE)}"qcstring.h"\
+	{$(INCLUDE)}"qfeatures.h"\
+	{$(INCLUDE)}"qgarray.h"\
+	{$(INCLUDE)}"qglobal.h"\
+	{$(INCLUDE)}"qiodevice.h"\
+	{$(INCLUDE)}"qshared.h"\
+	{$(INCLUDE)}"qstring.h"\
+	{$(INCLUDE)}"qtextstream.h"\
+	
+
+.\StateStream.cpp : \
+	".\State.h"\
+	".\StateStream.h"\
+	".\Vektor3f.h"\
+	{$(INCLUDE)}"qarray.h"\
+	{$(INCLUDE)}"qconfig.h"\
+	{$(INCLUDE)}"qcstring.h"\
+	{$(INCLUDE)}"qfeatures.h"\
+	{$(INCLUDE)}"qgarray.h"\
+	{$(INCLUDE)}"qglobal.h"\
+	{$(INCLUDE)}"qiodevice.h"\
+	{$(INCLUDE)}"qshared.h"\
+	{$(INCLUDE)}"qstring.h"\
+	{$(INCLUDE)}"qtextstream.h"\
+	
+
+.\Vektor3f.cpp : \
+	".\Vektor3f.h"\
+	
+
+!IF  "$(CFG)" == "QTOpenGL - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "QTOpenGL - Win32 Debug"
+
+!ENDIF 
+
+!IF  "$(CFG)" == "QTOpenGL - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "QTOpenGL - Win32 Debug"
+
+!ENDIF 
+
+!IF  "$(CFG)" == "QTOpenGL - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "QTOpenGL - Win32 Debug"
+
+!ENDIF 
+
+!IF  "$(CFG)" == "QTOpenGL - Win32 Release"
+
+!ELSEIF  "$(CFG)" == "QTOpenGL - Win32 Debug"
+
+!ENDIF 
+
