@@ -79,6 +79,7 @@ PaintWidget::PaintWidget(QWidget * parent, const char * name, WFlags f)
 	DiffColor[2]=1.0f;
 	DiffColor[3]=1.0f;
 	DiffScale=0.5f;
+	alpha=0;
 
 	bRainbow=false;
 
@@ -1692,6 +1693,7 @@ void PaintWidget::drawMainMenu(Menu* menu)
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
 	alpha+=0.5;
+	
 	
 	glEnable(GL_DEPTH_TEST);
 	glDepthMask(false);
