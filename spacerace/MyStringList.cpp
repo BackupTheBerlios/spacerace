@@ -7,14 +7,22 @@ MyStringList::MyStringList(QString in)
 
 	QString tmp;
 
-	while (!ts.atEnd())	// alle Zeilen durchgehen
+	while (!ts.atEnd())
 	{
 		ts >> tmp;
 		count++;
 	}
 
-	
+
 	QTextStream inStr( &in, IO_ReadOnly );
+	sList=new QString[count];
+
+	count=0;
+	while (!inStr.atEnd())	
+	{
+		ts >> sList[count];
+		count++;
+	}
 
 }
 

@@ -11,8 +11,13 @@ public:
 	MyStringList(QString);
 	~MyStringList(void);
 
-	QString * s;
+	QString * sList;
 
 	void split();
 	unsigned int count;
+
+	inline QString operator[](const unsigned int& i) const 
+	{
+		return sList[i];
+	}
 };
