@@ -2,7 +2,7 @@
 
 MyStringList::MyStringList(QString in)
 {
-	count=0;
+	cnt=0;
 	QTextStream ts( &in, IO_ReadOnly );
 
 	QString tmp;
@@ -10,26 +10,24 @@ MyStringList::MyStringList(QString in)
 	while (!ts.atEnd())
 	{
 		ts >> tmp;
-		count++;
+		cnt++;
 	}
 
 
 	QTextStream inStr( &in, IO_ReadOnly );
-	sList=new QString[count];
+	sList=new QString[cnt];
 
-	count=0;
+	cnt=0;
 	while (!inStr.atEnd())	
 	{
-		ts >> sList[count];
-		count++;
+		ts >> sList[cnt];
+		cnt++;
 	}
 
 }
 
 MyStringList::~MyStringList(void)
 {
+	delete[] sList;
 }
 
-void MyStringList::split(){
-
-}

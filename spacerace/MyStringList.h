@@ -5,7 +5,7 @@
 
 class MyStringList
 {
-
+	unsigned int cnt;
 
 public:
 	MyStringList(QString);
@@ -13,8 +13,8 @@ public:
 
 	QString * sList;
 
-	void split();
-	unsigned int count;
+
+	unsigned int count() {return cnt;}
 
 	inline QString operator[](const unsigned int& i) const 
 	{
