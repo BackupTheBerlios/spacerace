@@ -35,28 +35,28 @@
 class TCPClSocket  : public QSocket
 {
     Q_OBJECT
-
+		
 public:
 	TCPClSocket(int sock, QObject *parent=0, const char *name=0);
 	virtual ~TCPClSocket();
-
-//	inline void setVal(::State s){outSt=s;}
+	
+	//	inline void setVal(::State s){outSt=s;}
 	void setShips( Ship* s, OtherShip* ots);
 	void setShips(Ship* s,OtherShip* ots,OtherShip* ots3,OtherShip* ots4);
-
+	
 	int opCodeIn;
 	int opCodeOut;
 	bool won;
-
-
-//	inline ::State getClientState(){return inSt;}
-
+	
+	
+	//	inline ::State getClientState(){return inSt;}
+	
 private slots:
 	void readClient();
-
+	
 signals:
 	void sigWin();
-
+	
 private:
 	QDataStream *ds;
 	OtherShip* inSh;
@@ -64,7 +64,7 @@ private:
 	OtherShip* four;
 	Ship* outSh;
 	int lostSum;
-
+	
 };
 
 #endif 

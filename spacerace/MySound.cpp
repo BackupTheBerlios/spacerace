@@ -27,12 +27,11 @@
 
 MySound::MySound(const QString& name)
 {
-	initOK=true;
-
+	initOK=true;	
 	effect=true;
-
+	
 	printf("Loading Sound Effect: %s\n",(const char *)name);
-
+	
 }
 
 
@@ -40,15 +39,15 @@ MySound::MySound(const QString& name,int volMus)
 {
 	initOK=true;
 	effect=false;
-
-
+	
+	
 }
 
 
- 
+
 MySound::~MySound()
 {
- 
+	
 }
 
 

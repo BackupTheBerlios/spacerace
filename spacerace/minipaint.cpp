@@ -42,35 +42,35 @@
 int main(int argc, char** argv)
 {
 	srand( (unsigned)time( NULL ) );	// Zufallsgenerator init
-
+	
 	QApplication qapp(argc, argv);
 	QMainWindow qmainwindow(0,0);
 	qmainwindow.resize(800, 600);
 	Game GameController( &qmainwindow );
-
+	
 	QObject::connect( &GameController, SIGNAL(quit()), &qapp,SLOT(quit()) );
 	
-
+	
 	QMenuBar* qmenubar=qmainwindow.menuBar();
-
+	
 	// Menue "File" 
-/*	QPopupMenu qmenu_file(qmenubar, "MenuFile");
+	/*	QPopupMenu qmenu_file(qmenubar, "MenuFile");
 	qmenu_file.insertItem("Quit", &qapp, SLOT(quit()));
 	qmenu_file.insertItem("Load", GameController, SLOT(sltLoad()));
 	qmenubar->insertItem("&File", &qmenu_file);
-*/
-
-
-//--------------- T E S T S-------------------------------------
-
-/*--------------------------------------*/
-
+	*/
+	
+	
+	//--------------- T E S T S-------------------------------------
+	
+	/*--------------------------------------*/
+	
 	qmainwindow.setCaption("[Qt:] Space Race");
 	qmainwindow.setCentralWidget(&GameController);
 	qapp.setMainWidget( &qmainwindow );
 	qmainwindow.show();
-
-
+	
+	
 	return (qapp.exec());
 }
 

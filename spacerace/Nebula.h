@@ -31,20 +31,20 @@
 
 class Nebula : public SpaceObject  
 {
-
-
+	
+	
 public:
 	Nebula();
 	virtual ~Nebula();
 	virtual inline Vektor3f getPartPos(int i) const {return pos[i];}
 	virtual inline float getPartOpac(int i) const {return opac[i];}
 	virtual inline void setPartOpac(int i, float o) {opac[i]=0;}
-
+	
 protected:
 	
 	Vektor3f pos[200];
 	float opac[200];
-
+	
 };
 
 #endif 

@@ -21,9 +21,8 @@
 
 
 
-#if !defined (AFX_GAME_H__EDF58CA4_BF65_498B_8ADF_9051E086F23F__INCLUDED_)
-#define AFX_GAME_H__EDF58CA4_BF65_498B_8ADF_9051E086F23F__INCLUDED_
-
+#ifndef _GAME_H_
+#define _GAME_H_
 
 #include <qwidget.h>
 #include <qmainwindow.h>
@@ -72,4 +71,4 @@ class Game:public QWidget
 };
 
 
-#endif // !defined(AFX_GAME_H__EDF58CA4_BF65_498B_8ADF_9051E086F23F__INCLUDED_)
+#endif

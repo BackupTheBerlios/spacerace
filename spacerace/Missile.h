@@ -38,7 +38,7 @@ public:
 	virtual void reCalc();
     virtual inline int getLife() const {return myLife;}
 	void traceRoute();
-
+	
 private:
 	SpaceObject* target;
 	Vektor3f routeNode[8];
@@ -47,7 +47,7 @@ private:
 	int updInt; //updateintervall->lazy updates-dadurch hoffentlich coole Raketenbahnen :)
 	int tickCount;
 	int pattern,factor;
-
+	
 };
 
 #endif 

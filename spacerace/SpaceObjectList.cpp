@@ -37,16 +37,16 @@ SpaceObjectList::SpaceObjectList()
 
 void SpaceObjectList::reset()
 {
-
+	
 	printf("SpObjList: reset! ... ");
-
+	
 	//save ships
 	std::vector<SpaceObject*> shipList;
 	for (int s=0; (s<4)&&(s<list.size()); s++)
 	{
 		shipList.push_back(list[s])	;	
 	};	// for i
-
+	
 	
 	int delC=0;
 	for (int i=4; i<list.size(); i++)
@@ -55,16 +55,16 @@ void SpaceObjectList::reset()
 		delC++;
 	};	// for i
 	list.clear();
-
-
+	
+	
 	//restore ships
 	for ( i=0; (i<4)&&(i<s); i++)
 	{
 		list.push_back(shipList[i]);
 	};	// for i
-
+	
 	printf("SpaceObjectList: %d SpO deleted\n",delC);
-
+	
 }
 
 
@@ -77,7 +77,7 @@ void SpaceObjectList::show()
 	{
 		State st=list[i]->getState();
 		printf( "Object[%d]=%d\n",i,st.objType);
-	
+		
 	};	// for i
 }
 
@@ -92,7 +92,7 @@ SpaceObjectList::~SpaceObjectList()
 		delC++;
 	};	// for i
 	list.clear();
-
+	
 	printf("SpaceObjectList Destructor:  %d SpO deleted\n",delC);
 }
 
@@ -101,23 +101,23 @@ SpaceObjectList::~SpaceObjectList()
 
 void SpaceObjectList::resetGates()
 {
-
+	
 	for (int i=0; i<list.size(); i++)
 	{
 		int oT = list[i]->getObjType();
-
+		
 		if ( (oT==o_Gate1) || (oT==o_Gate2) )		// if Obj is Gate
 		{
 			list[i]->CheckPointPassed=false;
 			list[i]->CheckPointAllowed=false;
 		};
-
+		
 		if ( (oT==o_BoundingField) )
 		{
 			((BoundingField*)list[i])->resetGates();
 		};
-			
+		
 	};	// for i
-
+	
 	printf(" SOL: Gates reseted\n");
 }

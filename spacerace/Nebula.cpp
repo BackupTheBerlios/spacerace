@@ -40,18 +40,18 @@ Nebula::Nebula()
 		float length=8+rand()%250 *0.2f;
 		randVec.normalize();
 		randVec=randVec*length;
-
-	
+		
+		
 		Vektor3f q=myPos;
 		q=q+randVec;
 		pos[i]=q;
-//		printf("pos %d :",i);
-//		pos[i].show();
+		//		printf("pos %d :",i);
+		//		pos[i].show();
 	}
-
+	
 }
 
 Nebula::~Nebula()
 {
-
+	
 }

@@ -21,7 +21,7 @@
 
 
 
-       
+
 #ifndef _CONTROLLER_H
 #define _CONTROLLER_H 1
 
@@ -61,148 +61,148 @@
 class Controller:public QWidget
 {
 	Q_OBJECT
-
+		
 public:
-
+	
 	Controller(const QString &host,const int &player,int st, QWidget * parent=0, const char * name=0, WFlags f=0);
 	virtual ~Controller();
-
-
-	private:
-
-//	protected:
-
-		bool menuMode;
-		PaintWidget* Viewer;
-		Ship* Schiff1;
-
-
-		MySound * sndAllGates;
-		MySound * sndTimeOver;
-		MySound * sndProc;
-		MySound * sndMusic;
 	
-
-
-//MP==========
-
-		TCPServer *server1;
-		TCPServer *server2;
-		TCPServer *server3;
-
 	
-		TCPClSocket *c2;
-		TCPClSocket *c3;
-		TCPClSocket *c4;
-
-
-		int players;
-		bool isServer,isClient;
-
-		OtherShip* Schiff2;
-		OtherShip* Schiff3;
-		OtherShip* Schiff4;
-
-		TCPClient* cli;
-
-
-//MP==========
-//MPG
-		QString myHost;
-		int playerNr;
-		int stick;
-
-		Menu *mainMenu;
-
+private:
 	
-		SpaceObjectList* viewList;
-		SpaceObjectList* editList;
-
-		SpaceObject* target; int cycleTarg;
-		
-
-		QTimer *timer;
-		QTime *time;
-		int gateTime;
-		int roundTime;
-		bool timeOver;
-
-		bool mouseMode;
-
-		int gameOver;
-
-		Gate* activeGate;
-		Gate* firstGate;
-
-		Mesh* mesh_Other;
-		Mesh* mesh_Asteroid1;
-		Mesh* mesh_Asteroid2;
-		Mesh* mesh_Asteroid3;
-
-		Mesh* mesh_Gate1;
-		Mesh* mesh_Gate2;
-
-		bool bMulti;
-		int iMode;
-		int iTrack;
-		bool editMode;
-
-		bool playingmusic;
-
-//		void resetSzene();
-
-
-
-	protected:
-
-		void mousePressEvent(QMouseEvent*);	
-		void resizeEvent(QResizeEvent*);
-		void keyPressEvent( QKeyEvent* );
-		void keyReleaseEvent( QKeyEvent* );
-		
-		void loadScene(const QString& name);
-		void saveScene(const QString& name,SpaceObjectList*);
-
-		int readLine(const QStringList&,SpaceObjectList*);
-
-		void connectGates(SpaceObjectList*);
-		void cycleTargets();
-
-
-
-	public slots:
-		void tick(void);
-		void sltResize(QResizeEvent*);
-		void sltGatePassed(Gate*);
-		void sltSock1(TCPClSocket* s);
-		void sltSock2(TCPClSocket* s);
-		void sltSock3(TCPClSocket* s);
-
-		void startServer();
-		void startClient( QString host, int player);
-
-		void stopServer();
-		void stopClient();
-
-		void startMPGame();
-		void serverStartsMP();
-
+	//	protected:
+	
+	bool menuMode;
+	PaintWidget* Viewer;
+	Ship* Schiff1;
+	
+	
+	MySound * sndAllGates;
+	MySound * sndTimeOver;
+	MySound * sndProc;
+	MySound * sndMusic;
+	
+	
+	
+	//MP==========
+	
+	TCPServer *server1;
+	TCPServer *server2;
+	TCPServer *server3;
+	
+	
+	TCPClSocket *c2;
+	TCPClSocket *c3;
+	TCPClSocket *c4;
+	
+	
+	int players;
+	bool isServer,isClient;
+	
+	OtherShip* Schiff2;
+	OtherShip* Schiff3;
+	OtherShip* Schiff4;
+	
+	TCPClient* cli;
+	
+	
+	//MP==========
+	//MPG
+	QString myHost;
+	int playerNr;
+	int stick;
+	
+	Menu *mainMenu;
+	
+	
+	SpaceObjectList* viewList;
+	SpaceObjectList* editList;
+	
+	SpaceObject* target; int cycleTarg;
+	
+	
+	QTimer *timer;
+	QTime *time;
+	int gateTime;
+	int roundTime;
+	bool timeOver;
+	
+	bool mouseMode;
+	
+	int gameOver;
+	
+	Gate* activeGate;
+	Gate* firstGate;
+	
+	Mesh* mesh_Other;
+	Mesh* mesh_Asteroid1;
+	Mesh* mesh_Asteroid2;
+	Mesh* mesh_Asteroid3;
+	
+	Mesh* mesh_Gate1;
+	Mesh* mesh_Gate2;
+	
+	bool bMulti;
+	int iMode;
+	int iTrack;
+	bool editMode;
+	
+	bool playingmusic;
+	
+	//		void resetSzene();
+	
+	
+	
+protected:
+	
+	void mousePressEvent(QMouseEvent*);	
+	void resizeEvent(QResizeEvent*);
+	void keyPressEvent( QKeyEvent* );
+	void keyReleaseEvent( QKeyEvent* );
+	
+	void loadScene(const QString& name);
+	void saveScene(const QString& name,SpaceObjectList*);
+	
+	int readLine(const QStringList&,SpaceObjectList*);
+	
+	void connectGates(SpaceObjectList*);
+	void cycleTargets();
+	
+	
+	
+public slots:
+	void tick(void);
+	void sltResize(QResizeEvent*);
+	void sltGatePassed(Gate*);
+	void sltSock1(TCPClSocket* s);
+	void sltSock2(TCPClSocket* s);
+	void sltSock3(TCPClSocket* s);
+	
+	void startServer();
+	void startClient( QString host, int player);
+	
+	void stopServer();
+	void stopClient();
+	
+	void startMPGame();
+	void serverStartsMP();
+	
 				//MPG
-		void looseMP();
-		void serverWon(int);
-		void clientWon();
-		void clientError();
-
-	signals:
-		void sigResize(QResizeEvent* event);
-		void sigPaint ();
-		void sigUpdateViewer(SpaceObjectList*);
-		void sigKey(int);
-		void sigKeyR(int);
-		void quit();
-		void sigMessage(int);
-
-		void sigGameOver(QString,int,int);
+	void looseMP();
+	void serverWon(int);
+	void clientWon();
+	void clientError();
+	
+signals:
+	void sigResize(QResizeEvent* event);
+	void sigPaint ();
+	void sigUpdateViewer(SpaceObjectList*);
+	void sigKey(int);
+	void sigKeyR(int);
+	void quit();
+	void sigMessage(int);
+	
+	void sigGameOver(QString,int,int);
 };
 
 #endif

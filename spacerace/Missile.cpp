@@ -26,11 +26,11 @@
 
 Missile::Missile(SpaceObject* so, Vektor3f origin,Vektor3f dir, int type)
 {
-
+	
 	myPos=origin;
 	myOri=Vektor3f(1.0f, 0.0f, 0.0f);
 	myUp=Vektor3f(0.0f, 1.0f, 0.0f);
-
+	
 	myRotX.rotX(0.2f);
 	myRotY.rotY(0.2f);
 	myRotZ.rotZ(0.2f);
@@ -41,12 +41,12 @@ Missile::Missile(SpaceObject* so, Vektor3f origin,Vektor3f dir, int type)
 	tickCount=0;
 	routeNode[0]=myPos;
 	routeNode[6]=myPos;
-		if (type==0) //rakete
+	if (type==0) //rakete
 	{	myObjType = 30;
-		myLife=3000; //60 Sekunden
-		updInt=5; 
-		speed=1.1f;
-		routeNode[7]=origin+dir;
+	myLife=3000; //60 Sekunden
+	updInt=5; 
+	speed=1.1f;
+	routeNode[7]=origin+dir;
 	}
 	else 
 	{
@@ -56,16 +56,16 @@ Missile::Missile(SpaceObject* so, Vektor3f origin,Vektor3f dir, int type)
 		myLife=300;
 	}
 	if(target!=NULL)
-	routeGradient=target->getPos()-myPos;
+		routeGradient=target->getPos()-myPos;
 	routeGradient.normalize();
 	
 	
-
+	
 }
 
 Missile::~Missile()
 {
-  
+	
 }
 
 void Missile::reCalc()
@@ -87,14 +87,14 @@ void Missile::reCalc()
 				printf("target lost!\n");
 				routeNode[6]=myPos;
 				if(target!=NULL)
-				routeNode[7]=target->getPos();
+					routeNode[7]=target->getPos();
 			}
 			else 
 			{
 				pattern++;
 				routeNode[6]=myPos;
 				if (pattern<=18*factor)
-				myOri=myRotX*myOri;
+					myOri=myRotX*myOri;
 				else
 				{
 					myOri=myRotY*myOri;
@@ -137,7 +137,7 @@ void Missile::reCalc()
 
 void Missile::traceRoute()
 {
-
+	
 }
 
 #include "Missile_moc.cpp"

@@ -39,22 +39,22 @@
 
 class TCPClient  : public QObject
 {
-  Q_OBJECT
-
+	Q_OBJECT
+		
 public:
 	TCPClient( const QString &host, Q_UINT16 port );
 	virtual ~TCPClient();
 	
 	void setShips(Ship* s,OtherShip* ots,OtherShip* ots3,OtherShip* ots4);
-
+	
 	void updateServer();
-
+	
 	int opCodeIn;
 	int opCodeOut;
 	bool go,iWin;
 	bool error;
-
-
+	
+	
 public slots:
     void closeConnection();
     void socketReadyRead();
@@ -62,24 +62,24 @@ public slots:
     void socketConnectionClosed();
     void socketClosed();
     void socketError( int e );
-
+	
 private:
 	QDataStream *ds;
     QSocket *socket;
-
+	
 	State inSt,outSt;
 	OtherShip* inSh;
 	OtherShip* three;
 	OtherShip* four;
 	Ship* outSh;
 	int lostSum;
-
+	
 signals:
 	void criticalError();
 	void serverStartsMP();
 	void serverWonMP();
 	void sigWin();
-
+	
 };
 
 

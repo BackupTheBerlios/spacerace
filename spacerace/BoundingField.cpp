@@ -31,7 +31,7 @@ BoundingField::BoundingField(const float& rad)
 	myPos=Vektor3f(0.0f, 0.0f, 0.0f);
 	myOri=Vektor3f(0.0f, 0.0f, 1.0f);
 	myUp=Vektor3f(0.0f, 1.0f, 0.0f);
-
+	
 	myRotX.rotX(0);
 	myRotY.rotY(0);
 	myRotZ.rotZ(0);
@@ -39,19 +39,19 @@ BoundingField::BoundingField(const float& rad)
 	moving = false;
 	myMovDir=Vektor3f(0.0f, 0.0f, 0.0f);
 	speed=0.0f;
-
+	
 	myBoundRad = rad;
 	shipBoundRad = 0.0f;
 	myWidth = 0.0f;
 	myHeight = 0.0f;
 	myLength = 0.0f;
 	isbox = false;
-
+	
 	myCollMesh = NULL;
 	node = NULL;
 	tri = NULL;
 	triSize = 0;
-
+	
 	mySubObjects = new SpaceObjectList();
 }
 
@@ -63,7 +63,7 @@ BoundingField::BoundingField(const float& width, const float& height, const floa
 	myPos=Vektor3f(0.0f, 0.0f, 0.0f);
 	myOri=Vektor3f(0.0f, 0.0f, 1.0f);
 	myUp=Vektor3f(0.0f, 1.0f, 0.0f);
-
+	
 	myRotX.rotX(0);
 	myRotY.rotY(0);
 	myRotZ.rotZ(0);
@@ -71,22 +71,22 @@ BoundingField::BoundingField(const float& width, const float& height, const floa
 	moving = false;
 	myMovDir=Vektor3f(0.0f, 0.0f, 0.0f);
 	speed=0.0f;
-
+	
 	shipBoundRad = 0.0f;
-
+	
 	myWidth = width;
 	myHeight = height;
 	myLength = length;
-
+	
 	myBoundRad = sqrtf(myWidth*myWidth + myHeight*myHeight + myLength*myLength);
-
+	
 	isbox = true;
-
+	
 	myCollMesh = NULL;
 	node = NULL;
 	tri = NULL;
 	triSize = 0;
-
+	
 	mySubObjects = new SpaceObjectList();
 }
 

@@ -27,17 +27,17 @@
 
 Mesh::Mesh(const QString& name)
 {
-
+	
 	myBoundRad=0.0f;
-
+	
 	std::vector<Vektor3f> node;
 	std::vector<Face> tri;
-
+	
 	if ( name.isEmpty() )
 	{
 		printf("%s:  Mesh not found\n", (const char *)name);
 	};
-
+	
 	node.clear();
 	tri.clear();
 	
@@ -45,48 +45,48 @@ Mesh::Mesh(const QString& name)
 	QStringList line;
     QString s;
 	bool goOn=true;
-
+	
 	Vektor3f myV;
 	myV.x=0.0f;myV.y=0.0f;myV.z=0.0f;
 	node.push_back(myV);
-
+	
 	int fileType;
-
+	
 	if (name.right(3).upper()=="SMF")
 		fileType=0;
 	if (name.right(3).upper()=="ASC")
 		fileType=1;;
-
+	
 	if (data.open(IO_ReadOnly) )
 	{
 		printf( "Loading Collision Mesh: %s ... ",  (const char *)name );
 		QTextStream t( &data );        // use a text stream
-
+		
 		switch(fileType)
 		{
-	
+			
 		case 0:
-
-	        while ( goOn ) // until end of file...
+			
+			while ( goOn ) // until end of file...
 			{			
-			    s = t.readLine();       // line of text excluding '\n'
+				s = t.readLine();       // line of text excluding '\n'
 				line=QStringList::split(' ', s);
-		
+				
 				if (line[0]=="v")
 				{
 					Vektor3f cV;
 					cV.x=line[1].toFloat();
 					cV.y=line[2].toFloat();
 					cV.z=line[3].toFloat();
-
+					
 					if (cV.length()>myBoundRad)
 					{
 						myBoundRad=cV.length();
 					};
-
+					
 					node.push_back(cV);
 				};
-              
+				
 				if (line[0]=="f")
 				{
 					Face cF;
@@ -95,17 +95,17 @@ Mesh::Mesh(const QString& name)
 					cF.w[2]=line[3].toUInt();
 					tri.push_back(cF);
 				};
-	
+				
 				goOn=!t.eof();
 				if (line[0]=="bind") 
 				{
 					goOn=false;
 				};
+				
+			}; //while
 			
-		    }; //while
-
 			break;
-
+			
 		case 1:
 			while (!t.eof())
 			{
@@ -121,7 +121,7 @@ Mesh::Mesh(const QString& name)
 						cF.w[2]=line[4].mid(2).toUInt()+1;
 						tri.push_back(cF);
 					}
-
+					
 				};
 				if (line.count()>=5) 
 				{
@@ -133,39 +133,39 @@ Mesh::Mesh(const QString& name)
 				};
 			}; //while
 			break;
-
+			
 		}; // switch
-
+		
         data.close();
-
+		
 	}
-
+	
 	else
 	{
 		printf("* !! Konnte Datei %s nicht oeffnen!\n", (const char *)name);
 	};	// if
-
-
+	
+	
 	myNode = new Vektor3f[node.size()];
 	myTriSize=tri.size();
 	myTri = new Face[myTriSize];
-
+	
 	for (int i=0; i<node.size(); i++)
 	{
 		myNode[i] = node[i];
 	};
-
+	
 	for (i=0; i<myTriSize; i++)
 	{
 		myTri[i] = tri[i];
 	};
-
-
+	
+	
 	node.clear();
 	tri.clear();
-
+	
 	myBoundRad=myBoundRad+0.1f;		// Sicherheitsabstand
-
+	
 	printf("Load Complete!\n");
 }
 

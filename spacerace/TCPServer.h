@@ -31,16 +31,16 @@
 
 class TCPServer  : public QServerSocket
 {
-	    Q_OBJECT
+	Q_OBJECT
 public:
 	TCPServer(Q_UINT16 port,QObject* parent=0 );
 	virtual ~TCPServer();
-
+	
     void newConnection( int socket );
-
+	
 private:
 	bool inUse;
-
+	
 signals:
     void newConnect( TCPClSocket* );
 };

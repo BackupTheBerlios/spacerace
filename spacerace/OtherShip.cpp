@@ -34,14 +34,14 @@ OtherShip::OtherShip(Mesh* collM)
 	myUp=Vektor3f(0.0f, 1.0f, 0.0f);
 	myX=myOri.kreuz(myUp);
 	myX.normalize();
-
+	
 	myCollMesh = collM;
 	tri = myCollMesh->myTri;
 	node = myCollMesh->myNode;
 	triSize = myCollMesh->myTriSize;
-
+	
 	myBoundRad=myCollMesh->myBoundRad;	// Radius of Asteroid Bounding Sphere
-
+	
 	myRotX.rotX(0);
 	myRotY.rotY(0);
 	myRotZ.rotZ(0);
@@ -52,20 +52,20 @@ OtherShip::OtherShip(Mesh* collM)
 
 OtherShip::~OtherShip()
 {
-
+	
 }
 
 /*bool OtherShip::collision(const Vektor3f& before,const  Vektor3f& after,const  float& shbrad)
 {
-	//TO-DO=====
+//TO-DO=====
 
-	Vektor3f movement = after-before;
-	Vektor3f distance = (this->getPos()-before);
+  Vektor3f movement = after-before;
+  Vektor3f distance = (this->getPos()-before);
 		// zweiter Test, falls dotproduct <= 0 dann bewegen sich die Kugeln nicht aufeinander zu, also kann keine Kollision stattfinden
 		// (distance on movement-vector to closest point to objPos)
-	if (movement.dot(distance) <= 0) { return false; };
-
-	printf("OtherShip "); 
-	return true;
-};
+		if (movement.dot(distance) <= 0) { return false; };
+		
+		  printf("OtherShip "); 
+		  return true;
+		  };
 */

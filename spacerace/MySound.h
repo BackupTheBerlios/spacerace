@@ -22,7 +22,7 @@
 
 
 
-#if !defined(_MYSOUND_H_)
+#ifndef _MYSOUND_H_
 #define _MYSOUND_H_
 #include <stdio.h>
 #include <qstring.h>

@@ -22,9 +22,8 @@
 
 
 
-#if !defined(AFX_OTHERSHIP_H__350BBE00_C900_11D1_841F_00E07D974127__INCLUDED_)
-#define AFX_OTHERSHIP_H__350BBE00_C900_11D1_841F_00E07D974127__INCLUDED_
-
+#ifndef _OTHERSHIP_H_
+#define _OTHERSHIP_H_
 
 #include <windows.h>
 #include "SpaceObject.h"
@@ -32,18 +31,18 @@
 
 class OtherShip : public SpaceObject  
 {
-
-
-	public:
-
-		OtherShip(Mesh*);
-		virtual ~OtherShip();
-		inline void setPos(const Vektor3f& pos)
-			{myPos=pos;};
-
+	
+	
+public:
+	
+	OtherShip(Mesh*);
+	virtual ~OtherShip();
+	inline void setPos(const Vektor3f& pos)
+	{myPos=pos;};
+	
 	//bool collision(const Vektor3f&,const  Vektor3f&,const  float&);
-
-
+	
+	
 };
 
-#endif // !defined(AFX_OTHERSHIP_H__350BBE00_C900_11D1_841F_00E07D974127__INCLUDED_)
+#endif 

@@ -27,12 +27,12 @@
 
 
 TCPClSocket::TCPClSocket(int sock, QObject *parent, const char *name):
-        QSocket( parent, name )
+QSocket( parent, name )
 {
 	connect( this, SIGNAL(readyRead()),SLOT(readClient()) );
 	setSocket( sock );
 	ds=new QDataStream ( this );
-		lostSum=0;
+	lostSum=0;
 	opCodeOut=0;
 	won=false;
 }
@@ -61,10 +61,10 @@ void TCPClSocket::setShips(Ship* s,OtherShip* ots,OtherShip* ots3,OtherShip* ots
 
 void TCPClSocket::readClient()
 {
-
+	
 	::State outSt;
 	::State inSt;
-
+	
 	inSt.objType=1;
 	
 	int lost= -1;
@@ -72,48 +72,48 @@ void TCPClSocket::readClient()
 	while(!ds->atEnd ())
 	{
 		lost++;
-
+		
 		(*ds)  >> opCodeIn
-		  >> inSt.pos.x >> inSt.pos.y >> inSt.pos.z
-		  >> inSt.ori.x >> inSt.ori.y >> inSt.ori.z
-		  >> inSt.up.x  >> inSt.up.y  >> inSt.up.z ;	
+			>> inSt.pos.x >> inSt.pos.y >> inSt.pos.z
+			>> inSt.ori.x >> inSt.ori.y >> inSt.ori.z
+			>> inSt.up.x  >> inSt.up.y  >> inSt.up.z ;	
 	}
 	if (lost>0)
 	{
 		lostSum+=lost;
 		printf("Client: %d Packets lost - sum: %d \n",lost,lostSum);
 	}
-
+	
 	inSh->setState(inSt);
-
+	
 	outSt=outSh->getState();
 	(*ds)  << opCodeOut
-	  << outSt.pos.x << outSt.pos.y << outSt.pos.z
-	  << outSt.ori.x << outSt.ori.y << outSt.ori.z
-	  << outSt.up.x  << outSt.up.y  << outSt.up.z ;
+		<< outSt.pos.x << outSt.pos.y << outSt.pos.z
+		<< outSt.ori.x << outSt.ori.y << outSt.ori.z
+		<< outSt.up.x  << outSt.up.y  << outSt.up.z ;
 	
 	outSt=three->getState();
 	(*ds)  << opCodeOut
-	  << outSt.pos.x << outSt.pos.y << outSt.pos.z
-	  << outSt.ori.x << outSt.ori.y << outSt.ori.z
-	  << outSt.up.x  << outSt.up.y  << outSt.up.z ;
-
+		<< outSt.pos.x << outSt.pos.y << outSt.pos.z
+		<< outSt.ori.x << outSt.ori.y << outSt.ori.z
+		<< outSt.up.x  << outSt.up.y  << outSt.up.z ;
+	
 	outSt=four->getState();
 	(*ds)  << opCodeOut
-	  << outSt.pos.x << outSt.pos.y << outSt.pos.z
-	  << outSt.ori.x << outSt.ori.y << outSt.ori.z
-	  << outSt.up.x  << outSt.up.y  << outSt.up.z ;
-
+		<< outSt.pos.x << outSt.pos.y << outSt.pos.z
+		<< outSt.ori.x << outSt.ori.y << outSt.ori.z
+		<< outSt.up.x  << outSt.up.y  << outSt.up.z ;
+	
 	this->flush(); 
-
+	
 	//MPG
 	if ((opCodeIn==2)&&!won)
 	{
 		emit sigWin();
-			won=true;
+		won=true;
 		printf("Client won \n");
 	}
-
+	
 }
 
 

@@ -48,19 +48,19 @@ struct Face
 
 class Mesh  
 {
-
-	public:
-		Mesh(const QString&);
-		virtual ~Mesh();
-
-//		std::vector<Vektor3f> node;
-//		std::vector<Face> tri;
-
-		Vektor3f *myNode;
-		Face *myTri;
-		int myTriSize;
-		float myBoundRad;
-
+	
+public:
+	Mesh(const QString&);
+	virtual ~Mesh();
+	
+	//		std::vector<Vektor3f> node;
+	//		std::vector<Face> tri;
+	
+	Vektor3f *myNode;
+	Face *myTri;
+	int myTriSize;
+	float myBoundRad;
+	
 };
 
 #endif

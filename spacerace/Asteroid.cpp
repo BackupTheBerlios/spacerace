@@ -31,8 +31,8 @@ Asteroid::Asteroid(Mesh* collM)
 	myPos=Vektor3f(0.0f, 0.0f, 0.0f);
 	myOri=Vektor3f(0.0f, 0.0f, 1.0f);
 	myUp=Vektor3f(0.0f, 1.0f, 0.0f);
-
-
+	
+	
 	// Standartwerte setzen:
 	// zufällige Rotation
 	float zuf1 = ((float)(rand()%100))/10000.0f;	// rot-geschwindigkeit je feste raum-achse
@@ -42,18 +42,18 @@ Asteroid::Asteroid(Mesh* collM)
 	if ( (rand()%2)==0 ) { zuf2 = -zuf2; };
 	if ( (rand()%2)==0 ) { zuf3 = -zuf3; };
 	setEigenRot(zuf1,zuf2,zuf3);
-
+	
 	// zufällige Bewegung
 	float zufmov = ((float)((rand()%3000)+1))/55000;	// mov-geschwindigkeit
 	Vektor3f zMov(zuf1,zuf2,zuf3);
 	zMov.normalize();
 	setMovement(zMov,zufmov);
-
+	
 	myCollMesh = collM;
 	tri = myCollMesh->myTri;
 	node = myCollMesh->myNode;
 	triSize = myCollMesh->myTriSize;
-
+	
 	myBoundRad=myCollMesh->myBoundRad;	// Radius of Asteroid Bounding Sphere
 }
 

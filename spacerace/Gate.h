@@ -52,58 +52,58 @@
 
 class Gate :public SpaceObject
 {
-
 	Q_OBJECT
-	public:
 
-		Gate(Mesh*);
-		virtual ~Gate();
-
-		inline void setSuccGate(Gate* sG) { succGate = sG; };
-		inline Gate* getSuccGate() { return succGate; };
-
-		inline void enableCheckPoint()
+public:
+	
+	Gate(Mesh*);
+	virtual ~Gate();
+	
+	inline void setSuccGate(Gate* sG) { succGate = sG; };
+	inline Gate* getSuccGate() { return succGate; };
+	
+	inline void enableCheckPoint()
+	{
+		CheckPointAllowed=true;
+	};
+	
+	inline void setBothSides(const bool& bothsides)
+	{
+		checkBothSides = bothsides;
+	};
+	
+	
+	inline virtual bool collisionPoly(const Vektor3f& before,const  Vektor3f& after,const  float& shbrad)
+	{
+		if (!CheckPointPassed && CheckPointAllowed && collCheckSphere(before,after,shbrad))
 		{
-			CheckPointAllowed=true;
+			printf("** CheckSphere hit **\n");
+			CheckPointPassed=true;
+			emit sigCheckPointPassed(succGate);
+			CheckPointAllowed=false;
 		};
+		return (SpaceObject::collisionPoly(before,after,shbrad));
+	};
+	
+	
+	
+private:
+	
+	float CheckSphereBoundRad;
+	bool collCheckSphere(const Vektor3f &before, const Vektor3f &after, const float& sbrad)const;
+	
+	Gate* succGate;
+	
+	bool checkBothSides;
+	
+	
+	
+public slots:
+	
+	
+signals:
 
-		inline void setBothSides(const bool& bothsides)
-		{
-			checkBothSides = bothsides;
-		};
-
-
-		inline virtual bool collisionPoly(const Vektor3f& before,const  Vektor3f& after,const  float& shbrad)
-		{
-			if (!CheckPointPassed && CheckPointAllowed && collCheckSphere(before,after,shbrad))
-			{
-				printf("** CheckSphere hit **\n");
-				CheckPointPassed=true;
-				emit sigCheckPointPassed(succGate);
-				CheckPointAllowed=false;
-			};
-			return (SpaceObject::collisionPoly(before,after,shbrad));
-		};
-
-
-
-	private:
-
-		float CheckSphereBoundRad;
-		bool collCheckSphere(const Vektor3f &before, const Vektor3f &after, const float& sbrad)const;
-
-		Gate* succGate;
-
-		bool checkBothSides;
-
-
-
-	public slots:
-
-
-	signals:
-
-		void sigCheckPointPassed(Gate*);
+void sigCheckPointPassed(Gate*);
 
 
 };

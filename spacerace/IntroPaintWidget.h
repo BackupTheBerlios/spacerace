@@ -23,7 +23,7 @@
 
 
 
-       
+
 #ifndef _INTROPAINT_WIDGET_H
 #define _INTROPAINT_WIDGET_H 1
 
@@ -64,20 +64,20 @@
 
 class IntroPaintWidget:public QGLWidget	       //erbt QGLWidget
 {
-
+	
 	struct Face
 	{
 		unsigned int w[3];
 	};
-
-
+	
+	
 	struct quadparticles
 	{
 		Vektor3f pos,lo,lu,ro,ru;
 		float life,fade;
 		bool active;
 	};
-
+	
 	
 	struct particles
 	{
@@ -85,35 +85,35 @@ class IntroPaintWidget:public QGLWidget	       //erbt QGLWidget
 		float life,fade;
 		bool active;
 	};
-
-		struct objFace
+	
+	struct objFace
 	{
 		unsigned int w[9];
 	};
-
+	
 	struct Tex
 	{
 		float w[2];
 	};
-
-
-
-
-	Q_OBJECT
-
-
-	protected:	
 	
+	
+	
+	
+	Q_OBJECT
+		
+		
+	protected:	
+		
 		//OpenGL						//Einstellungen:		
 		void initializeGL();			//Rendermode, Licht, Persp....
-
+		
 		void paintGL();					//Szene zeichnen
 		void checkError();
-
+		
 		//QT
 		void paintEvent(QPaintEvent*);
 		void resizeEvent(QResizeEvent*);
-	
+		
 		//Eigene Fkt
 		void showCab();
 		void setCameraState(const State&,const Vektor3f&);
@@ -130,27 +130,27 @@ class IntroPaintWidget:public QGLWidget	       //erbt QGLWidget
 		void drawThruster(particles[], const Vektor3f&, Vektor3f&, const float&, bool burner=false);
 		void updateThruster(particles[]);
 		void drawNebula(SpaceObject*);
-
+		
 		GLvoid BuildFont(GLvoid);
 		GLvoid glPrint(const char *fmt, ...);
 		GLuint fontBase;
-
-
-
-
+		
+		
+		
+		
 	public:
-
+		
 		// Konstruktor/Destruktor
 		IntroPaintWidget(QWidget * parent=0, const char * name=0, WFlags f=0);
 		~IntroPaintWidget();
 		void resizeGL( int,int );		//Fenstergrösse, Perspektive....
-	
+		
 		bool hinterherflieg;
-
+		
 		bool afterburner;
 		int shake_strength;
 		Vektor3f shakePos;
-
+		
 		float alpha;
 		int iClouds;
 		int flashLight;
@@ -164,7 +164,7 @@ class IntroPaintWidget:public QGLWidget	       //erbt QGLWidget
 		float AmbColor[4];
 		float DiffScale;
 		float DiffColor[4];
-
+		
 		Ship* Schiff;
 		float cpRoll,cpLR,cpUD;
 		
@@ -172,44 +172,44 @@ class IntroPaintWidget:public QGLWidget	       //erbt QGLWidget
 		int sunPixels;
 		
 		float mScalX,mScalY;
-	
-
+		
+		
 	private:
-
+		
 		GLfloat	rtri;				// Angle For The Triangle ( NEW )
 		GLfloat	rquad;				// Angle For The Quad ( NEW )
-
+		
 		Vektor3f camPos;
 		Vektor3f camOri;
 		Vektor3f camUp;
 		Vektor3f camRealOri;
 		Vektor3f camX;
-
+		
 		int gTextures[23],w,h;
 		float maxDist,hScal,wScal;    
 		GLuint base;
 		particles particle[200];
 		particles exhaustParticle[100];
 		quadparticles qParticle[2000];
-
+		
 		GLsizei listRange;
-
+		
 		bool loadMesh(const QString&,bool bObjNormals=false);
-
+		
 		Vektor3f lensPos;
-
+		
 		float screen_fade;
-
-
-
+		
+		
+		
 	public slots:
-
+		
 		void sltLoad(void);
 		void sltResize(QResizeEvent*);
 		void sltInput(SpaceObjectList*);
-
-
-
+		
+		
+		
 };
 
 #endif

@@ -21,7 +21,7 @@
 
 
 
-       
+
 #ifndef _PAINT_WIDGET_H
 #define _PAINT_WIDGET_H 1
 
@@ -62,20 +62,20 @@
 
 class PaintWidget:public QGLWidget	       //erbt QGLWidget
 {
-
+	
 	struct Face
 	{
 		unsigned int w[3];
 	};
-
-
+	
+	
 	struct quadparticles
 	{
 		Vektor3f pos,lo,lu,ro,ru;
 		float life,fade;
 		bool active;
 	};
-
+	
 	
 	struct particles
 	{
@@ -83,31 +83,31 @@ class PaintWidget:public QGLWidget	       //erbt QGLWidget
 		float life,fade;
 		bool active;
 	};
-
-		struct objFace
+	
+	struct objFace
 	{
 		unsigned int w[9];
 	};
-
+	
 	struct Tex
 	{
 		float w[2];
 	};
-
-
-
-
-	Q_OBJECT
-
-
-	protected:	
 	
+	
+	
+	
+	Q_OBJECT
+		
+		
+	protected:	
+		
 		//OpenGL						//Einstellungen:		
 		void initializeGL();			//Rendermode, Licht, Persp....
-
+		
 		void paintGL();					//Szene zeichnen
 		void checkError();
-
+		
 		//QT
 		void mousePressEvent(QMouseEvent*);	
 		void mouseReleaseEvent(QMouseEvent*);	
@@ -115,7 +115,7 @@ class PaintWidget:public QGLWidget	       //erbt QGLWidget
 		void paintEvent(QPaintEvent*);
 		void resizeEvent(QResizeEvent*);
 		void keyPressEvent( QKeyEvent* );
-			
+		
 		QCursor* cursor;
 		//Eigene Fkt
 		void showCab();
@@ -125,7 +125,7 @@ class PaintWidget:public QGLWidget	       //erbt QGLWidget
 		GLuint loadAlphaTexture(char *filename, bool mipMap=false);
 		void OrthoMode(const int&, const int&, const int&, const int&);
 		void PerspectiveMode();
-//		void renderDigit(const int&, const int&, const int&, const float&, const float&, const float&);
+		//		void renderDigit(const int&, const int&, const int&, const float&, const float&, const float&);
 		void drawCockpit();
 		void drawRadar();//TO-DO
 		void drawLensFlare(const Vektor3f& ,bool bOcc=false);
@@ -140,39 +140,39 @@ class PaintWidget:public QGLWidget	       //erbt QGLWidget
 		void targeting(State*);
 		void drawMainMenu(Menu*);
 		void drawNebula(SpaceObject*);
-//		void drawDebris(particles[]);
-
+		//		void drawDebris(particles[]);
+		
 		GLvoid BuildFont(GLvoid);
 		GLvoid glPrint(const char *fmt, ...);
 		GLuint fontBase;
-
+		
 		GLuint message;
-
-
-
+		
+		
+		
 	public:
-
+		
 		bool menuMode;
-
+		
 		// Konstruktor/Destruktor
 		PaintWidget(QWidget * parent=0, const char * name=0, WFlags f=0);
 		~PaintWidget();
 		void resizeGL( int,int );		//Fenstergrösse, Perspektive....
-	
+		
 		bool afterburner;
 		int aftFuel;
 		int shake_strength;
 		Vektor3f shakePos;
-
-
+		
+		
 		int targAquired;
 		int zoomFactor; //radar
-
+		
 		bool cockpitVisible;
 		bool hinterherflieg;
 		bool show_BoundingSpheres;
 		bool show_CheckSpheres;
-
+		
 		float alpha;
 		int iClouds;
 		int flashLight;
@@ -186,74 +186,74 @@ class PaintWidget:public QGLWidget	       //erbt QGLWidget
 		float AmbColor[4];
 		float DiffScale;
 		float DiffColor[4];
-
+		
 		Ship* Schiff;
 		float cpRoll,cpLR,cpUD;
 		
 		bool NV_OCC;
 		int sunPixels;
-
+		
 		bool jStickDet,jStick;
 		JOYINFOEX stick;
-
+		
 		float mScalX,mScalY;
 		
 		inline void setFirstGate(Gate* fG) { firstGate = fG; };
 		void setTarget(SpaceObject*);
-
+		
 		void updateJoystick();
-
-
-
+		
+		
+		
 	private:
-
+		
 		GLfloat	rtri;				// Angle For The Triangle ( NEW )
 		GLfloat	rquad;				// Angle For The Quad ( NEW )
-
+		
 		Vektor3f camPos;
 		Vektor3f camOri;
 		Vektor3f camUp;
 		Vektor3f camRealOri;
 		Vektor3f camX;
-
-
+		
+		
 		SpaceObjectList* sList;	//nötig für radar und pfeil
 		SpaceObject* target;
 		int gTextures[50],w,h,minutes,seconds,time;
 		Gate* targetGate;	//vom softwareergonomischen Standpunkt muss das in den controller
-							//faulheitstechnisch isses jetzt mal eben hier ;)
+		//faulheitstechnisch isses jetzt mal eben hier ;)
 		int oldGate; //um aus Faulheit das Signal das ein Tor passed wurde zu umgehen
 		float maxDist,hScal,wScal;    
 		GLuint base;
 		particles particle[200];
 		particles exhaustParticle[100];
 		quadparticles qParticle[2000];
-//		particles debris[30];
-
+		//		particles debris[30];
+		
 		GLsizei listRange;
-
+		
 		bool loadMesh(const QString&,bool bObjNormals=false);
-
+		
 		Gate* firstGate;
 		Menu* mainMenu;
 		
 		int bMulti;
 		int iMode;
 		int iTrack;
-
+		
 		SpaceObject* tempSpObj;
-
-
+		
+		
 	public slots:
-
+		
 		void sltLoad(void);
 		void sltResize(QResizeEvent*);
 		void sltInput(SpaceObjectList*);
 		void sltMenu(Menu*);
-
+		
 		void drawMessage(int texName);
-
-
+		
+		
 };
 
 #endif

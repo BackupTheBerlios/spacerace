@@ -51,26 +51,26 @@
 
 class Asteroid :public SpaceObject
 {
-
-
+	
+	
 	Q_OBJECT
-
-
-	public:
-
-		Asteroid(Mesh*);
-		virtual ~Asteroid();
-
-
-
-	private:
-
-
-
-	public slots:
-
-
-	signals:
+		
+		
+public:
+	
+	Asteroid(Mesh*);
+	virtual ~Asteroid();
+	
+	
+	
+private:
+	
+	
+	
+public slots:
+	
+	
+signals:
 
 
 };

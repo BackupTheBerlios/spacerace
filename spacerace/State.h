@@ -31,13 +31,13 @@
 struct State  
 {
 public:
-
-
-//	void show();
-
+	
+	
+	//	void show();
+	
 	int objType;
 	Vektor3f pos,ori,up;
-
+	
 };
 
 #endif 

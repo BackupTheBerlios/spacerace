@@ -35,41 +35,41 @@
 
 class SpaceObjectList
 {
-
-	public:
-		SpaceObjectList();
-		virtual ~SpaceObjectList();
-
-		std::vector<SpaceObject*> list;
-
-		inline void addItem( SpaceObject* s) { list.push_back(s); }
-		inline void updateItem( SpaceObject* s, const int& nr)	{ list[nr]=s; }	
-		inline SpaceObject* getSpObj(const int& nr)const	 { return list[nr]; }
-			
-		void reset();
-		inline void setTime(const int& t)	{ myTime=t; }
-		inline int getTime() const	{ return myTime; }
-		inline void delItem(const int& i) 
-		{	
-			printf("Dynamisches Objekt %d gelöscht!\n",i);
-			list.erase(list.begin()+i); 
-		}
-
-		void show() ;
-
-
-		inline int getCount() const { return list.size(); }
-
-		//bool allGatesFinished();	// nicht mehr benötigt
-		void resetGates();
-
-
-
-	private:
-
-		
-		int myTime;
-
+	
+public:
+	SpaceObjectList();
+	virtual ~SpaceObjectList();
+	
+	std::vector<SpaceObject*> list;
+	
+	inline void addItem( SpaceObject* s) { list.push_back(s); }
+	inline void updateItem( SpaceObject* s, const int& nr)	{ list[nr]=s; }	
+	inline SpaceObject* getSpObj(const int& nr)const	 { return list[nr]; }
+	
+	void reset();
+	inline void setTime(const int& t)	{ myTime=t; }
+	inline int getTime() const	{ return myTime; }
+	inline void delItem(const int& i) 
+	{	
+		printf("Dynamisches Objekt %d gelöscht!\n",i);
+		list.erase(list.begin()+i); 
+	}
+	
+	void show() ;
+	
+	
+	inline int getCount() const { return list.size(); }
+	
+	//bool allGatesFinished();	// nicht mehr benötigt
+	void resetGates();
+	
+	
+	
+private:
+	
+	
+	int myTime;
+	
 };
 
 #endif 

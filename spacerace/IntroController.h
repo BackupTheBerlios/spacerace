@@ -22,7 +22,7 @@
 
 
 
-       
+
 #ifndef _INTROCONTROLLER_H
 #define _INTROCONTROLLER_H 1
 
@@ -64,60 +64,60 @@
 class IntroController:public QWidget
 {
 	Q_OBJECT
-
-
-	public:
-
-		IntroController(const QString &host,const QString &portString, QWidget * parent=0, const char * name=0, WFlags f=0);
-		virtual ~IntroController();
-
-
-
-	private:
-
-		int tickCount;
-		bool alreadyDone;
-
-		Ship* Schiff1;
 		
-		SpaceObject* Schiff2;
-		SpaceObject* Schiff3;
-		SpaceObject* Schiff4;
-		SpaceObject* OurNames;
-		SpaceObject* Flare;
-
-		IntroPaintWidget* Viewer;
-
-		SpaceObjectList* viewList;
-
-		QTimer *timer;
-
-		bool playingmusic;
-
-		void resizeEvent(QResizeEvent*);
-		void keyPressEvent( QKeyEvent* );
-
-		MySound * sndMusic;
-
-
-
-	protected:
-
-
-
-	public slots:
-
-		void tick(void);
-		void sltResize(QResizeEvent*);
-
-
-	signals:
-
-		void sigResize(QResizeEvent* event);
-		void sigPaint ();
-		void sigUpdateViewer(SpaceObjectList*);
-		void quit();
-
+		
+public:
+	
+	IntroController(const QString &host,const QString &portString, QWidget * parent=0, const char * name=0, WFlags f=0);
+	virtual ~IntroController();
+	
+	
+	
+private:
+	
+	int tickCount;
+	bool alreadyDone;
+	
+	Ship* Schiff1;
+	
+	SpaceObject* Schiff2;
+	SpaceObject* Schiff3;
+	SpaceObject* Schiff4;
+	SpaceObject* OurNames;
+	SpaceObject* Flare;
+	
+	IntroPaintWidget* Viewer;
+	
+	SpaceObjectList* viewList;
+	
+	QTimer *timer;
+	
+	bool playingmusic;
+	
+	void resizeEvent(QResizeEvent*);
+	void keyPressEvent( QKeyEvent* );
+	
+	MySound * sndMusic;
+	
+	
+	
+protected:
+	
+	
+	
+public slots:
+	
+	void tick(void);
+	void sltResize(QResizeEvent*);
+	
+	
+signals:
+	
+	void sigResize(QResizeEvent* event);
+	void sigPaint ();
+	void sigUpdateViewer(SpaceObjectList*);
+	void quit();
+	
 };
 
 #endif

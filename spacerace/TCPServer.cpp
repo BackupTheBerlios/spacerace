@@ -26,13 +26,13 @@
 
 
 TCPServer::TCPServer(Q_UINT16 port,QObject* parent):
-        QServerSocket( port, 1, parent )
+QServerSocket( port, 1, parent )
 {
     if ( !ok() ) 
 	{
-
+		
 		printf("Failed to bind to port: %d\n",port);
-       
+		
     }
 	printf("New server startet. Listening  port: %d\n",port);
 	inUse=false;

@@ -39,12 +39,11 @@ Matrix4x4::Matrix4x4()
 
 Matrix4x4::~Matrix4x4()
 {
-
 }
 
 Matrix4x4::Matrix4x4(const Vektor3f &a, const Vektor3f &b, const Vektor3f &c, const Vektor3f &d)
 {
-
+	
 	m[0][0]=a.x;	m[0][1]=b.x;	m[0][2]=c.x; 	m[0][3]=d.x;
 	m[1][0]=a.y;	m[1][1]=b.y;	m[1][2]=c.y;	m[1][3]=d.y;
 	m[2][0]=a.z;	m[2][1]=b.z;	m[2][2]=c.z;	m[2][3]=d.z;
@@ -57,6 +56,6 @@ void Matrix4x4::show(void)
 	printf("Homogene Matrix\n");	
 	for (int i=0;i<4;i++)
 	{
-			printf("( %.3f %.3f %.3f %.3f)\n",m[i][0],m[i][1], m[i][2],m[i][3] );
+		printf("( %.3f %.3f %.3f %.3f)\n",m[i][0],m[i][1], m[i][2],m[i][3] );
 	};
 }

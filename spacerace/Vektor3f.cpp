@@ -21,12 +21,12 @@
 
 
 
-
+/*
 #include "Vektor3f.h"
 
 
 
-/*Vektor3f::Vektor3f()
+Vektor3f::Vektor3f()
 {
 	x=0.0f;
 	y=0.0f;
@@ -44,6 +44,6 @@ Vektor3f::Vektor3f(float x2, float y2, float z2)
 
 Vektor3f::~Vektor3f()
 {
-
+	
 }
 */

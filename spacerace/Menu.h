@@ -31,8 +31,8 @@
 
 class Menu : public QObject  
 {
-
-		Q_OBJECT
+	
+	Q_OBJECT
 public:
 	Menu();
 	virtual ~Menu();
@@ -45,11 +45,11 @@ public:
 	int settings[9];
 	int bStart;
 	bool numberMode;
-//	int otherPlayer2,otherPlayer3,otherPlayer4;
+	//	int otherPlayer2,otherPlayer3,otherPlayer4;
 	QString player;
 	QString host;
-			bool client2,client3,client4,connected;
-
+	bool client2,client3,client4,connected;
+	
 	bool nameState;
 	
 signals:
@@ -57,9 +57,9 @@ signals:
 	void startServer();
 	void stopClient();
 	void stopServer();
-
+	
 	void startMPGame();
-
+	
 };
 
 #endif 
