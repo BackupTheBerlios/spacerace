@@ -214,7 +214,7 @@ ProjDir=.
 InputPath=.\Asteroid.h
 InputName=Asteroid
 
-"czj" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+"$(ProjDir)/$(InputName)_moc.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	moc $(ProjDir)/$(InputName).h -o$(ProjDir)/$(InputName)_moc.cpp
 
 # End Custom Build
@@ -239,6 +239,16 @@ InputName=BoundingField
 # End Custom Build
 
 !ELSEIF  "$(CFG)" == "QTOpenGL - Win32 Debug"
+
+# Begin Custom Build
+ProjDir=.
+InputPath=.\BoundingField.h
+InputName=BoundingField
+
+"$(ProjDir)/$(InputName)_moc.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	moc $(ProjDir)/$(InputName).h -o$(ProjDir)/$(InputName)_moc.cpp
+
+# End Custom Build
 
 !ENDIF 
 
@@ -296,6 +306,16 @@ InputName=Game
 
 !ELSEIF  "$(CFG)" == "QTOpenGL - Win32 Debug"
 
+# Begin Custom Build
+ProjDir=.
+InputPath=.\Game.h
+InputName=Game
+
+"$(ProjDir)/$(InputName)_moc.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	moc $(ProjDir)/$(InputName).h -o$(ProjDir)/$(InputName)_moc.cpp
+
+# End Custom Build
+
 !ENDIF 
 
 # End Source File
@@ -348,6 +368,16 @@ InputName=IntroController
 
 !ELSEIF  "$(CFG)" == "QTOpenGL - Win32 Debug"
 
+# Begin Custom Build
+ProjDir=.
+InputPath=.\IntroController.h
+InputName=IntroController
+
+"$(ProjDir)/$(InputName)_moc.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	moc $(ProjDir)/$(InputName).h -o$(ProjDir)/$(InputName)_moc.cpp
+
+# End Custom Build
+
 !ENDIF 
 
 # End Source File
@@ -368,6 +398,16 @@ InputName=IntroPaintWidget
 # End Custom Build
 
 !ELSEIF  "$(CFG)" == "QTOpenGL - Win32 Debug"
+
+# Begin Custom Build
+ProjDir=.
+InputPath=.\IntroPaintWidget.h
+InputName=IntroPaintWidget
+
+"$(ProjDir)/$(InputName)_moc.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	moc $(ProjDir)/$(InputName).h -o$(ProjDir)/$(InputName)_moc.cpp
+
+# End Custom Build
 
 !ENDIF 
 
@@ -394,6 +434,16 @@ InputName=Menu
 
 !ELSEIF  "$(CFG)" == "QTOpenGL - Win32 Debug"
 
+# Begin Custom Build
+ProjDir=.
+InputPath=.\Menu.h
+InputName=Menu
+
+"$(InputName)_moc.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+	moc $(ProjDir)/$(InputName).h -o$(ProjDir)/$(InputName)_moc.cpp
+
+# End Custom Build
+
 !ENDIF 
 
 # End Source File
@@ -414,7 +464,7 @@ ProjDir=.
 InputPath=.\Missile.h
 InputName=Missile
 
-"czl" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+"$(ProjDir)/$(InputName)_moc.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	moc $(ProjDir)/$(InputName).h -o$(ProjDir)/$(InputName)_moc.cpp
 
 # End Custom Build
@@ -562,7 +612,7 @@ ProjDir=.
 InputPath=.\TCPClient.h
 InputName=TCPClient
 
-"cvhxc" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+"$(ProjDir)/$(InputName)_moc.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	moc $(ProjDir)/$(InputName).h -o$(ProjDir)/$(InputName)_moc.cpp
 
 # End Custom Build
@@ -593,7 +643,7 @@ ProjDir=.
 InputPath=.\TCPClSocket.h
 InputName=TCPClSocket
 
-"dtrzt" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+"$(ProjDir)/$(InputName)_moc.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	moc $(ProjDir)/$(InputName).h -o$(ProjDir)/$(InputName)_moc.cpp
 
 # End Custom Build
@@ -624,7 +674,7 @@ ProjDir=.
 InputPath=.\TCPServer.h
 InputName=TCPServer
 
-"zttu" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
+"$(ProjDir)/$(InputName)_moc.cpp" : $(SOURCE) "$(INTDIR)" "$(OUTDIR)"
 	moc $(ProjDir)/$(InputName).h -o$(ProjDir)/$(InputName)_moc.cpp
 
 # End Custom Build
