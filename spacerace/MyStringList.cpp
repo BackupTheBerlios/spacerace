@@ -1,4 +1,4 @@
-#include ".\mystringlist.h"
+#include "MyStringList.h"
 
 MyStringList::MyStringList(QString in)
 {

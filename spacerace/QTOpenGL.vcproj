@@ -280,6 +280,9 @@
 				</FileConfiguration>
 			</File>
 			<File
+				RelativePath=".\MyStringList.cpp">
+			</File>
+			<File
 				RelativePath="Nebula.cpp">
 				<FileConfiguration
 					Name="Debug|Win32">
@@ -421,7 +424,8 @@
 					Name="Debug|Win32">
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="moc $(InputName).h  -o$(InputName)_moc.cpp"
+						CommandLine="moc $(InputName).h  -o$(InputName)_moc.cpp
+"
 						Outputs="$(ProjectDir)$(InputName)_moc.cpp"/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -439,7 +443,8 @@
 					Name="Debug|Win32">
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="moc $(InputName).h -o $(InputName)_moc.cpp"
+						CommandLine="moc $(InputName).h -o $(InputName)_moc.cpp
+"
 						Outputs="$(ProjectDir)$(InputName)_moc.cpp"/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -457,7 +462,8 @@
 					Name="Debug|Win32">
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="moc $(InputName).h -o $(InputName)_moc.cpp"
+						CommandLine="moc $(InputName).h -o $(InputName)_moc.cpp
+"
 						Outputs="$(ProjectDir)$(InputName)_moc.cpp"/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -478,7 +484,8 @@
 					Name="Debug|Win32">
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="moc $(InputName).h -o $(InputName)_moc.cpp"
+						CommandLine="moc $(InputName).h -o $(InputName)_moc.cpp
+"
 						Outputs="$(ProjectDir)$(InputName)_moc.cpp"/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -496,7 +503,8 @@
 					Name="Debug|Win32">
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="moc $(InputName).h -o $(InputName)_moc.cpp"
+						CommandLine="moc $(InputName).h -o $(InputName)_moc.cpp
+"
 						Outputs="$(ProjectDir)$(InputName)_moc.cpp"/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -514,7 +522,8 @@
 					Name="Debug|Win32">
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="moc $(InputName).h -o $(InputName)_moc.cpp"
+						CommandLine="moc $(InputName).h -o $(InputName)_moc.cpp
+"
 						Outputs="$(ProjectDir)$(InputName)_moc.cpp"/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -532,7 +541,8 @@
 					Name="Debug|Win32">
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="moc $(InputName).h -o $(InputName)_moc.cpp"
+						CommandLine="moc $(InputName).h -o $(InputName)_moc.cpp
+"
 						Outputs="$(ProjectDir)$(InputName)_moc.cpp"/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -553,7 +563,8 @@
 					Name="Debug|Win32">
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="moc $(InputName).h -o $(InputName)_moc.cpp"
+						CommandLine="moc $(InputName).h -o $(InputName)_moc.cpp
+"
 						Outputs="$(InputName)_moc.cpp"/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -574,12 +585,16 @@
 					Name="Debug|Win32">
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="moc $(InputName).h -o $(InputName)_moc.cpp"
+						CommandLine="moc $(InputName).h -o $(InputName)_moc.cpp
+"
 						Outputs="$(ProjectDir)$(InputName)_moc.cpp"/>
 				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="MySound.h">
+			</File>
+			<File
+				RelativePath=".\MyStringList.h">
 			</File>
 			<File
 				RelativePath="Nebula.h">
@@ -593,7 +608,8 @@
 					Name="Debug|Win32">
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="moc $(InputName).h -o $(InputName)_moc.cpp"
+						CommandLine="moc $(InputName).h -o $(InputName)_moc.cpp
+"
 						Outputs="$(ProjectDir)$(InputName)_moc.cpp"/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -614,7 +630,8 @@
 					Name="Debug|Win32">
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="moc $(InputName).h -o $(InputName)_moc.cpp"
+						CommandLine="moc $(InputName).h -o $(InputName)_moc.cpp
+"
 						Outputs="$(ProjectDir)$(InputName)_moc.cpp"/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -632,7 +649,8 @@
 					Name="Debug|Win32">
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="moc $(InputName).h -o $(InputName)_moc.cpp"
+						CommandLine="moc $(InputName).h -o $(InputName)_moc.cpp
+"
 						Outputs="$(ProjectDir)$(InputName)_moc.cpp"/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -656,7 +674,8 @@
 					Name="Debug|Win32">
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="moc $(InputName).h -o $(InputName)_moc.cpp"
+						CommandLine="moc $(InputName).h -o $(InputName)_moc.cpp
+"
 						Outputs="$(ProjectDir)$(InputName)_moc.cpp"/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -674,7 +693,8 @@
 					Name="Debug|Win32">
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="moc $(InputName).h -o $(InputName)_moc.cpp"
+						CommandLine="moc $(InputName).h -o $(InputName)_moc.cpp
+"
 						Outputs="$(ProjectDir)$(InputName)_moc.cpp"/>
 				</FileConfiguration>
 				<FileConfiguration
@@ -692,7 +712,8 @@
 					Name="Debug|Win32">
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="moc $(InputName).h -o $(InputName)_moc.cpp"
+						CommandLine="moc $(InputName).h -o $(InputName)_moc.cpp
+"
 						Outputs="$(ProjectDir)$(InputName)_moc.cpp"/>
 				</FileConfiguration>
 				<FileConfiguration
