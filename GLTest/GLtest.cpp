@@ -1,5 +1,5 @@
 /****************************************************************************
-** $Id: GLtest.cpp,v 1.1 2004/05/04 16:33:39 sr_alex Exp $
+** $Id: GLtest.cpp,v 1.3 2004/05/04 16:44:50 sr_alex Exp $
 **
 ** Copyright (C) 1992-2000 Trolltech AS.  All rights reserved.
 **
@@ -33,6 +33,7 @@ int main(int argc, char* argv[])
     }
 
     GLObjectWindow w;
+	//fette  grosse änderung, muahahahahaha
     w.resize( 400, 350 );
     a.setMainWidget( &w );
     w.show();

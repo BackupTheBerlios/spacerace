@@ -1,5 +1,5 @@
 /****************************************************************************
-** $Id: glbox.cpp,v 1.1 2004/05/04 16:33:39 sr_alex Exp $
+** $Id: glbox.cpp,v 1.2 2004/05/04 16:42:18 sr_alex Exp $
 **
 ** Copyright (C) 1992-2000 Trolltech AS.  All rights reserved.
 **
@@ -48,7 +48,7 @@ GLBox::~GLBox()
 
 /*!
   Paint the box. The actual openGL commands for drawing the box are
-  performed here.
+  performed here...
 */
 
 void GLBox::paintGL()
